@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { SearchComponent } from './search/search.component';
 import { SaveComponent } from './save/save.component';
+import { SearchFormComponent } from './search-form/search-form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SaveComponent } from './save/save.component';
     NavbarComponent,
     JumbotronComponent,
     SearchComponent,
-    SaveComponent
+    SaveComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,
