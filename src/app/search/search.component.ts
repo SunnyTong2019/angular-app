@@ -15,7 +15,6 @@ export class SearchComponent implements OnInit {
 
   setSearchResults(searchResults){
     this.searchResults = searchResults;
-    console.log(this.searchResults);
   }
 
 }

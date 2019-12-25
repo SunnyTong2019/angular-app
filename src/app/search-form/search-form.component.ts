@@ -18,11 +18,7 @@ export class SearchFormComponent implements OnInit {
   }
 
   submitSearch () {
-    this._google.searchGoogleBooks(this.searchTerm).subscribe(res => 
-      {
-        this.searchResults.emit(res.items);
-      }
-      );
+    this._google.searchGoogleBooks(this.searchTerm).subscribe(res => this.searchResults.emit(res["items"]));
   }
 
 }
