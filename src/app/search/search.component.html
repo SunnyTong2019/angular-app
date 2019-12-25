@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-12">
 
-            <app-search-form></app-search-form>
+            <app-search-form (searchResults)="setSearchResults($event)"></app-search-form>
 
         </div>
     </div>
