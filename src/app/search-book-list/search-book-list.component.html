@@ -17,7 +17,13 @@
                     </p>
                     <a class="btn btn-primary mr-3" target="_blank" [attr.href]=book.volumeInfo.infoLink>View Book</a>
 
-                    <button class="btn btn-primary">Save Book</button>
+                    <button class="btn btn-primary save-book" (click)="saveBook({
+                        title: book.volumeInfo.title,
+                        authors: book.volumeInfo.authors,
+                        description: book.volumeInfo.description,
+                        image: book.volumeInfo.imageLinks.thumbnail,
+                        infoLink: book.volumeInfo.infoLink
+                    })">Save Book</button>
                 </div>
             </div>
         </div>
