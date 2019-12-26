@@ -3,7 +3,7 @@ const path = require("path");
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-//const apiRoutes = require("./routes/apiRoutes");
+const apiRoutes = require("./routes/apiRoutes");
 
 
 // Define middleware here
@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'dist/angular-app')));
 
 // Use apiRoutes
-//app.use("/api", apiRoutes);
+app.use("/api", apiRoutes);
 
 // Send every request to the Angular app
 // Define any API routes before this runs
