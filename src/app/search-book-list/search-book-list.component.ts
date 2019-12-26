@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit, Input, ElementRef } from '@angular/core';
+import { BookService } from "../book.service";
 
 @Component({
   selector: 'app-search-book-list',
@@ -9,13 +10,12 @@ export class SearchBookListComponent implements OnInit {
 
   @Input() bookList: object[];
 
-  constructor(private _elementRef: ElementRef) {}
+  constructor(private _elementRef: ElementRef, private _book: BookService) { }
 
   ngAfterViewInit() {
     let el = this._elementRef.nativeElement.querySelector('.save-book');
-    if(el)
-    {
-       el.addEventListener('click', this.saveBook.bind(this));
+    if (el) {
+      el.addEventListener('click', this.saveBook.bind(this));
     }
   }
 
@@ -23,7 +23,14 @@ export class SearchBookListComponent implements OnInit {
   }
 
   saveBook(book) {
-    console.log(book);
+    this._book.saveBook(book).subscribe(res => {
+      if (res["_id"] ) { 
+        console.log("Saved successfully!"); }
+      else {
+        console.log(res);
+      }
+    }
+    );
   }
 
 }
