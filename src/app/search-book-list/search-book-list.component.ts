@@ -25,10 +25,10 @@ export class SearchBookListComponent implements OnInit {
   saveBook(book) {
     this._book.saveBook(book).subscribe(res => {
       if (res["_id"]) {
-        console.log("Saved successfully!");
+        alert("Saved successfully!");
       }
-      else {
-        console.log(res);
+      else if (res.toString() === "Already Saved") {
+        alert("Already Saved!");
       }
     }
     );

@@ -30,7 +30,7 @@ module.exports = {
       .then(
         function (dbModel) {
           if (dbModel.length > 0) { // if book is already saved, just return a message
-            res.send("Already Saved");
+            res.json("Already Saved");
           }
           else { // if not, then save the book
             db.Book
