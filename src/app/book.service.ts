@@ -18,4 +18,8 @@ export class BookService {
     return this._http.get<Book[]>("/api/books");
   }
 
+  deleteBook(bookID) {
+    return this._http.delete("/api/books/" + bookID);
+  }
+
 }

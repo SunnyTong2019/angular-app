@@ -23,7 +23,7 @@
                                     <a class="btn btn-primary mr-3" target="_blank" [attr.href]=book.infoLink>View
                                         Book</a>
 
-                                    <button class="btn btn-primary delete-book">Delete Book</button>
+                                    <button class="btn btn-primary delete-book" (click)="deleteBook(book._id)">Delete Book</button>
                                 </div>
 
                             </div>
