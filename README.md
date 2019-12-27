@@ -1,27 +1,34 @@
-# AngularApp
+# Google Books
+Google Books is an Angular-based book search app. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+On Search page, the app will query books via the Google Books API and display books based on user searches. 
 
-## Development server
+Users have the option to "View" a book, bringing them to the book on Google Books, or "Save" a book, saving it to the Mongo database.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+On Saved Books page, the app will display all saved books. 
 
-## Code scaffolding
+Users have the option to "View" the book, bringing them to the book on Google Books, or "Delete" the book, removing it from the Mongo database.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Technologies Used 
+The app was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The back end uses Node.js along with below NPM packages:
+ * express
+ * mongoose
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Deployed Link
+https://whispering-peak-50358.herokuapp.com/
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Motivation
+The purpose of this project was to practice Angular in a full stack application.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Contributor
+The app is developed by [SunnyTong2019](https://github.com/SunnyTong2019).
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
