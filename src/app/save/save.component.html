@@ -1,1 +1,41 @@
-<p>save works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <ng-template [ngIf]="savedBookList.length > 0" [ngIfElse]="none">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let book of savedBookList">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-xs-4 col-sm-2">
+                                    <img [attr.src]=book.image class="img-fluid">
+                                </div>
+
+                                <div class="col-xs-8 col-sm-9">
+                                    <h3>{{ book.title }}</h3>
+                                    <p>
+                                        Author(s): {{ book.authors.join(", ") }}
+                                    </p>
+                                    <p>
+                                        {{ book.description }}
+                                    </p>
+                                    <a class="btn btn-primary mr-3" target="_blank" [attr.href]=book.infoLink>View
+                                        Book</a>
+
+                                    <button class="btn btn-primary delete-book">Delete Book</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </ng-template>
+
+            <ng-template #none>
+                <h2 [ngStyle]="{'text-align': 'center'}">No Saved Books!</h2>
+            </ng-template>
+
+        </div>
+    </div>
+</div>

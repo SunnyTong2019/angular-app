@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import {GoogleService} from '../google.service';
+import { GoogleService } from '../google.service';
 
 
 @Component({
@@ -8,7 +8,7 @@ import {GoogleService} from '../google.service';
   styleUrls: ['./search-form.component.css']
 })
 export class SearchFormComponent implements OnInit {
-  
+
   searchTerm: string = "";
   @Output() searchResults = new EventEmitter();
 
@@ -17,7 +17,7 @@ export class SearchFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitSearch () {
+  submitSearch() {
     this._google.searchGoogleBooks(this.searchTerm).subscribe(res => this.searchResults.emit(res["items"]));
   }
 

@@ -10,8 +10,8 @@ import { SaveComponent } from './save/save.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { SearchBookListComponent } from './search-book-list/search-book-list.component';
 
-import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
